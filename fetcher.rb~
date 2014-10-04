@@ -35,12 +35,12 @@ class Fetcher
         #--- call track url ---
         @played = Fetcher::playedRate
         Fetcher::request tracks.imp
-        Fetcher::request_net_http tracks.view
-        Fetcher::request_net_http tracks.rate["0%"]
-        Fetcher::request_net_http tracks.rate["25%"] if @played >= 25
-        Fetcher::request_net_http tracks.rate["50%"] if @played >= 50
-        Fetcher::request_net_http tracks.rate["75%"] if @played >= 75
-        Fetcher::request_net_http tracks.rate["100%"] if @played >= 100
+        Fetcher::request tracks.view
+        Fetcher::request tracks.rate["0%"]
+        Fetcher::request tracks.rate["25%"] if @played >= 25
+        Fetcher::request tracks.rate["50%"] if @played >= 50
+        Fetcher::request tracks.rate["75%"] if @played >= 75
+        Fetcher::request tracks.rate["100%"] if @played >= 100
     end
 
     #--- accessor
@@ -73,6 +73,10 @@ class Fetcher
         }
         puts res.body
     end   
+
+
+
+
 
 
     #--- Calc Played Ratio (1 to 100) ---

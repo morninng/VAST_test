@@ -6,7 +6,7 @@ require 'logger'
 
 #--- configuration ---
 total_imp = 100000
-end_at = Time.parse( "2014/10/01 10:00:00" )
+end_at = Time.parse( "2014/10/31 10:00:00" )
 weights = [
 #   0    1    2    3    4    5    6    7    8    9    10   11 (hour)
     0.9, 0.3, 0.2, 0.2, 0.2, 0.2, 0.3, 0.4, 0.6, 1.0, 0.9, 0.8, # AM
